@@ -33,6 +33,7 @@ function App() {
         <h1>Password Generator</h1>
         <p>Create your strong and unique password using thInclude application</p>
       </header>
+
       <div>
         <h3>Select from the options below to strengthen your security</h3>
         <div className="form-group">
@@ -51,12 +52,14 @@ function App() {
             <label htmlFor="include-symbols">Include Symbols</label>
             <input checked={includeSymbols} onChange={(e) => setIncludeSymbols(e.target.checked)} type="checkbox" name="include-symbols" />
         </div>
-      </div>
-      <div>
         <button onClick={()=>handleClick()}>Generate Password</button>
       </div>
-      <div>
-        {password}
+  
+      <div className="password">
+        <h3>{password}</h3>
+        <button className="copy__btn">
+          Copy
+        </button>
       </div>
     </div>
   );
